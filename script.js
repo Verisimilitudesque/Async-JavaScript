@@ -16,4 +16,7 @@
   //.catch(error => console.error(error))
   //.finally(() => console.log('done'));
 
-fetch("https://jsonplaceholder.typicode.com/posts/1");
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+    // Pulls JSON data from the API
+    .then(response => response.json())
+    .then (data => { console.log(data.title)})
